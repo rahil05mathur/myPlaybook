@@ -1,1 +1,8 @@
+---
+- name: "first basic playbook"
+  hosts: app
 
+  tasks:
+  - name: test the connectivity to host app nodes
+    ping:
+  
