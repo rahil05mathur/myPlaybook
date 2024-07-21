@@ -1,0 +1,29 @@
+---
+- hosts: all
+  become: true
+  tasks:
+   
+    - name: Install Amazon Linux Extras repository
+      command: amazon-linux-extras install -y epel
+
+    - name:  enable httpd amazon linux extra packages
+      shell: amazon-linux-extras enable httpd_modules
+
+    - name: install httpd module 
+      ansible.builtin.yum:
+       name: httpd
+       state: present
+
+    - name: ensure that http service is enabled or not
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+       src: index.html
+       dest: /var/www/html
+       owner: root
+       group: root
+       mode: '0644'
