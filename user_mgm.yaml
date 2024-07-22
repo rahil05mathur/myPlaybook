@@ -10,3 +10,5 @@
       comment: new user adding for devops team
       shell: /bin/zsh
       groups: QA,mathurrahil
+      state: absent
+      remove: yes
