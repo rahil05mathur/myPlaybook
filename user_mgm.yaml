@@ -11,3 +11,4 @@
       shell: /bin/zsh
       group: QA,mathurrahil
       state: absent
+      remove: yes
