@@ -7,4 +7,7 @@
     file:
       path: /tmp/newfile.txt
       state: touch
+      owner: root
+      group: root
+      mode: u=rwx,g=rw,o=r
       
