@@ -1,0 +1,12 @@
+---
+- name: Copying files to managed nodes
+  hosts: all
+  tasks:
+  - name: Copy files
+    copy:
+      src: /home/mathurrahil/rahil.txt
+      dest: /tmp/
+      owner: root
+      group: root
+      mode: ugo=rw
+      backup: true
