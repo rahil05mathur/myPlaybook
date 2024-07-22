@@ -11,4 +11,10 @@
       shell: /bin/zsh
       group: QA, mathurrahil
       state: absent
+    user:
+      name: sangeeta
+      comment: user sangeeta adding into devops team
+      shell: /bin/zsh
+      group: QA, mathurrahil
+      
       
