@@ -1,6 +1,6 @@
 ---
 - name: run a script
-  hosts: all
+  hosts: app
   tasks:
   - name: Run script
     shell: /tmp/script/test.sh
