@@ -1,7 +1,8 @@
 ---
 - name: File Module
   hosts: all
-
+  become: true
+  
   tasks:
   - name: Creating a file
     file:
