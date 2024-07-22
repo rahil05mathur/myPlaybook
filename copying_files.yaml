@@ -1,11 +1,9 @@
 ---
 - name: Copying files to managed nodes
   hosts: all
-  become: true
-
   tasks:
   - name: Copy files
     copy:
-      src: home/mathurrahil/rahil.txt
+      src: /home/mathurrahil/rahil.txt
       dest: /tmp/
       
