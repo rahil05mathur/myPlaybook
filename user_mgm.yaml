@@ -1,0 +1,12 @@
+---
+- name: User Management
+  hosts: all
+  become: true
+
+  tasks:
+  - name: create the user
+    user:
+      name: akshita
+      comment: new user adding for devops team
+      shell: /bin/zsh
+      
