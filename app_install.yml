@@ -1,6 +1,6 @@
 ---
 - name: Install and Start the Service
-  host: all
+  hosts: all
   tasks:
   - name: Install nginx
     yum:
