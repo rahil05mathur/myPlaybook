@@ -9,4 +9,4 @@
       name: akshita
       comment: new user adding for devops team
       shell: /bin/zsh
-      group: QA,mathurrahil
+      groups: QA,mathurrahil
