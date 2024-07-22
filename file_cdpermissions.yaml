@@ -11,4 +11,9 @@
       owner: mathurrahil
       group: root
       mode: u=rwx,g=rw,o=r
+
+  - name: Creating the directory
+    file:
+      path: /tmp/myDirectory
+      state: directory
       
