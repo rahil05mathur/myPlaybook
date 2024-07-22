@@ -1,0 +1,6 @@
+---
+- name: run a script
+  hosts: all
+  tasks::wq!
+  - name: Run script
+    shell: /tmp/script/test.sh
