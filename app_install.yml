@@ -8,7 +8,7 @@
       name: nginx
       state: present
   - name: Starting the nginx service
-    service:
+    systemctl:
       name: nginx
       state: started
       enabled: true
