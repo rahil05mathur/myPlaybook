@@ -1,6 +1,6 @@
 ---
 - name: firewall changes
-  hosts:
+  hosts: all
 
   tasks:
   - name: Enable a service in firewalld
