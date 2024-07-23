@@ -3,6 +3,10 @@
   hosts: all
 
   tasks:
+  - name: installing the firewalld package
+    yum:
+      name: firewalld
+      state: present
   - name: Enable a service in firewalld
     firewalld:
       service: nginx
