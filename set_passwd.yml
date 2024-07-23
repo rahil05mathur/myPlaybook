@@ -6,4 +6,4 @@
     user:
       name: disha
       update_passwd: always
-      password: disha23
+      password: "{{'disha23' | password_hash('sha512')}}"
