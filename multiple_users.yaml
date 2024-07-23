@@ -32,7 +32,7 @@
     user:
       name: disha
       state: present
-      group: admin
+      groups: admin
 
   - name: create a ssh key for the user disha
     user:
