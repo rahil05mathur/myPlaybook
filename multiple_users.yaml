@@ -26,7 +26,7 @@
     group:
       name: admin
       state: present
-      gid: 100
+      gid: 1008
 
   - name: add user 'disha' to the primary group of admin
     user:
