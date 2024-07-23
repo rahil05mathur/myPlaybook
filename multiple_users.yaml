@@ -1,6 +1,7 @@
 ---
 - name: set the user password for all machines
   hosts: all
+  become: true
 
   tasks:
   - name: add user disha 
