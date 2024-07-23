@@ -10,7 +10,7 @@
       state: present
   - name: Enable a service in firewalld
     firewalld:
-      service: nginx
+      port: 80/tcp
       permanent: true
       state: enabled
   - name: reload the firewalld
