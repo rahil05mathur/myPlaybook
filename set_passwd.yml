@@ -5,5 +5,5 @@
   - name: set passwd
     user:
       name: disha
-      update_passwd: always
+      update_password: always
       password: "{{'disha23' | password_hash('sha512')}}"
