@@ -1,0 +1,41 @@
+---
+- name: set the user password for all machines
+  hosts: all
+
+  tasks:
+  - name: add user disha 
+    user:
+      name: disha
+      password: disha23
+      shell: /bin/bash
+      uid: 100
+  - name: add user sangeeta 
+    user:
+      name: sangeeta
+      password: sangeeta23
+      shell: /bin/bash
+      uid: 101
+  - name: add user sangeeta 
+    user:
+      name: sanjay
+      password: sanjay27
+      shell: /bin/bash
+      uid: 102
+  - name: create a group with name admin 
+    group:
+      name: admin
+      state: present
+      gid: 100
+
+  - name: add user 'disha' to the primary group of admin
+    user:
+      name: disha
+      state: present
+      group: admin
+
+  - name: create a ssh key for the user disha
+    user:
+      name: disha
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
