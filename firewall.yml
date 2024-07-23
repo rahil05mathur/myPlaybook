@@ -1,6 +1,7 @@
 ---
 - name: firewall changes
   hosts: all
+  become: true
 
   tasks:
   - name: installing the firewalld package
