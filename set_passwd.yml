@@ -1,9 +1,10 @@
 ---
 - name: set password
   hosts: all
+  become: true
   tasks:
   - name: set passwd
     user:
       name: disha
       update_password: always
-      password: "{{'disha23' | password_hash('sha512')}}"
+      password: "{{'disha' | password_hash('sha512')}}"
