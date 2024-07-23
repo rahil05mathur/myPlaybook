@@ -1,0 +1,9 @@
+---
+- name: set password
+  hosts: all
+  tasks:
+  - name: set passwd
+    user:
+      name: disha
+      update_passwd: always
+      password: disha23
