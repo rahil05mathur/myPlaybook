@@ -15,9 +15,10 @@
     - name: ruchit
       uid: 105
   tasks:
-  user:
-     name: "{{ item.name }}"
-     state: present
-     shell: /bin/zsh
-     uid: "{{ item.uid }}"
-  loop: "{{ users }}"
+   - name: add multiple users
+     user:
+      name: "{{ item.name }}"
+      state: present
+      shell: /bin/zsh
+      uid: "{{ item.uid }}"
+     loop: "{{ users }}"
