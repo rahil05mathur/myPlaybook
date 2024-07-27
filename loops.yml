@@ -4,7 +4,7 @@
   become: true
   vars:
    users:
-    - name: ["akshita", "disha", "ruchit", "sangeeta", "sanjay"]
+      name: ["akshita", "disha", "ruchit", "sangeeta", "sanjay"]
       uid: [1, 2, 3]
   tasks:
   user:
