@@ -2,7 +2,7 @@
 - name: create users using ansible loops
   hosts: all
   become: true
-  vars:
+  var:
    users:
       name: ["akshita", "disha", "ruchit", "sangeeta", "sanjay"]
       uid: [1, 2, 3]
