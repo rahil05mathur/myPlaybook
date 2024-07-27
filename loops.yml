@@ -1,12 +1,16 @@
 ---
- - name: create users using ansible loops
-   hosts: app
-   become: true
-   tasks:
-   user:
-    - name: "{{ item }}"
-      state: present
-      with_items:
+- name: create users using ansible loops
+  hosts: app
+  become: true
+  vars:
+   uuid: ["1", "2", "3"]
+  tasks:
+  user:
+   - name: "{{ item }}"
+     state: present
+     shell: /bin/zsh
+     uid: 10"{{uuid}}"
+     with_items:
         - akshita
         - disha
         - sangeeta
