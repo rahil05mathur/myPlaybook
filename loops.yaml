@@ -4,8 +4,16 @@
   become: true
   vars:
    users:
-      name: ["akshita", "disha", "ruchit", "sangeeta", "sanjay"]
-      uid: [101, 102, 103]
+      name:
+       - akshita
+       - disha
+       - ruchit
+       - sangeeta
+       - sanjay
+      uid:
+       - 101
+       - 102
+       - 103
   tasks:
   user:
      name: "{{ item.name }}"
