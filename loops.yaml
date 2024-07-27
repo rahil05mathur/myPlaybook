@@ -19,5 +19,5 @@
      name: "{{ item.name }}"
      state: present
      shell: /bin/zsh
-     uid: "{{item.uid}}"
+     uid: "{{ item.uid }}"
   loop: "{{ users }}"
