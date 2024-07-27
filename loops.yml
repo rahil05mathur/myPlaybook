@@ -1,6 +1,6 @@
 ---
 - name: create users using ansible loops
-  host: app
+  hosts: all
   become: true
   vars:
    uuid: ["1", "2", "3"]
