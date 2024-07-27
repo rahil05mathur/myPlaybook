@@ -6,14 +6,19 @@
    users:
     - name: disha
       uid: 101
+      password: disha23
     - name: akshita
       uid: 102
+      password: akshita09
     - name: sangeeta
       uid: 103
+      password: sangeeta23
     - name: sanjay
       uid: 104
+      password: sanjay27
     - name: ruchit
       uid: 105
+      password: ruchit14
   tasks:
    - name: add multiple users
      user:
