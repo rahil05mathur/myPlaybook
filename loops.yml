@@ -3,16 +3,13 @@
   hosts: all
   become: true
   vars:
-   uuid: ["1", "2", "3"]
+   users:
+    - name: ["akshita", "disha", "ruchit", "sangeeta", "sanjay"]
+      uid: [1, 2, 3]
   tasks:
   user:
-     name: "{{ item }}"
+     name: "{{ item.name }}"
      state: present
      shell: /bin/zsh
-     uid: 10"{{uuid}}"
-     with_items:
-        - disha
-        - akshita
-        - sangeeta
-        - sanjay
-        - ruchit
+     uid: 10"{{item.uid}}"
+  loop: "{{ users }}"
