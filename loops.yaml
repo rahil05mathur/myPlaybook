@@ -5,11 +5,11 @@
   vars:
    users:
       name: ["akshita", "disha", "ruchit", "sangeeta", "sanjay"]
-      uid: ["101", "102", "103"]
+      uid: [101, 102, 103]
   tasks:
   user:
      name: "{{ item.name }}"
      state: present
      shell: /bin/zsh
-     uid: {{item.uid}}"
+     uid: "{{item.uid}}"
   loop: "{{ users }}"
