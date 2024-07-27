@@ -26,4 +26,5 @@
       state: present
       shell: /bin/zsh
       uid: "{{ item.uid }}"
+      password: "{{ item.password }}"
      loop: "{{ users }}"
