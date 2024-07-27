@@ -1,9 +1,9 @@
 ---
-- name: create users using ansible loops
-  hosts: app
-  become: true
-  tasks:
-  user:
+ - name: create users using ansible loops
+   hosts: app
+   become: true
+   tasks:
+   user:
     - name: "{{ item }}"
       state: present
       with_items:
